@@ -1,0 +1,3 @@
+- Create classes of Model-package
+- Create classes of Util-package
+- Create classes of GameLogic-package
