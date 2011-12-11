@@ -1,5 +1,7 @@
 #include "cell.h"
 
+// Test commit
+
 Cell::Cell(int xPos, int yPos, QWidget *parent) : QPushButton(parent){
     this->setGeometry(xPos,yPos,64,64);
 }
