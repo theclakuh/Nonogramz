@@ -1,34 +1,33 @@
 #include "history.h"
 
-History::History(){
-
+History::History(Matrix* m){
+    this->matrix = m;
 }
 
 void History::marked(std::string name){
 
 }
 
-void History::newEntriy(Matrix *map){
-
+void History::newEntry(Cell* cell,std::string name){
+    HistoryEntry ent = new HistoryEntry(cell,name);
+    entries.push_back(ent);
 }
 
 void History::playRecord(){
 
 }
 
-Matrix* History::popEntry(std::string name){
-    Cell** cells;
-    return new Matrix(cells, 0);
+Cell* History::popEntry(int xPos, int yPos){
+    return matrix->getCellAt(xPos, yPos);//add after mario commit
 }
 
-Matrix* History::popLastCorrectState(){
-    Cell** cells;
-    return new Matrix(cells, 0);
+Cell* History::popLastCorrectState(){
+    return matrix->getCellAt(lastPosX,lastPosY);//add after mario commit
 
 }
 
-Matrix* History::popLastEntry(){
-    Cell** cells;
-    return new Matrix(cells, 0);
+Cell* History::popLastEntry(){
+    HistoryEntry* ent = entries.end();
+    return ent;
 
 }
