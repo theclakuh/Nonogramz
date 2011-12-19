@@ -1,0 +1,7 @@
+planed next steps:
+    - implement constructor and paint for Matrix
+    - implement constructor and paint for Cell
+    - implement createMatrixWidget
+    - implement adding MatrixWidget to the MainWindow
+    - test drawings
+    - remember cells instead of matricies in hinstoryEntry

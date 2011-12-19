@@ -1,0 +1,15 @@
+16.12.2011:
+    - Changes in classes Matrix and MatrixWidget to work with 1D Cellarray
+    - repaint-Method for MatrixWidget. it is now able zu draw a scalable
+      matrix of Cells
+    - Adding a repaintMethod to Cell class for give them an own style
+    - Class BoardFactory deleted
+    - TEMPORARILY: wrote code in the constructor of MainWindow that adds
+                   MatrixWidget with 5x5 matrix and paints it
+                   the repaint-method of MainWindow is also maipulated
+                   it will change the size of the MatrixWidget to check
+                   the scalability of MatrixWidget
+
+19.12.2011
+	- Class Cell is drawn carresponding to its userstate
+	- Cell react on the mouse releasEvent
