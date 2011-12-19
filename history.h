@@ -11,12 +11,14 @@ class History
     //TODO: Mark/Remember Cells not Matrix
 public:
     History(Matrix *m);
-    void newEntriy(Cell* cell,std::string name);
+    History();      //Dummy should be removed
+    ~History();
+    void newEntry(Cell* cell,std::string name);
     void marked(std::string name);
-    Cell* popEntry(int xPos, int yPos);
-    Cell* popLastEntry();
+    HistoryEntry* popEntry(int number);
+    HistoryEntry* popLastEntry();
     void playRecord();
-    Cell* popLastCorrectState();
+    HistoryEntry* popLastCorrectState();
 
 private:
     std::vector<HistoryEntry*> entries;
