@@ -11,7 +11,6 @@ public:
     HistoryEntry(Cell* cell,std::string name);
     void setUndo(bool b);
     bool getUndo();
-
     void setMarked(bool b);
     bool getMarked();
     Cell* getEntry();
