@@ -18,7 +18,7 @@ bool HistoryEntry::isUndone(){
     return undone;
 }
 
-Cell* HistoryEntry::getEntry(){
+Cell* HistoryEntry::getCell(){
     return cell;
 }
 

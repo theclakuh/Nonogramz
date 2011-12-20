@@ -12,17 +12,20 @@ class History
     //TODO: Mark/Remember Cells not Matrix
 public:
     History();
+    History(Matrix* matrix);
     ~History();
+    void setMatrix(Matrix* matrix);
     void newEntry(Cell* cell, std::string name);
     HistoryEntry* popEntry(std::string name);
     HistoryEntry* popEntry(int number);
-    HistoryEntry* popLastCorrectState(Matrix* currentMatrix); //will run over the entries an look for the last one
+    HistoryEntry* popLastCorrectState(); //will run over the entries an look for the last one
                                                       //in which all cells are correct selected like the matrix suggests
     HistoryEntry* popLastEntry();
     void playRecord();
 
 private:
     std::vector<HistoryEntry*> entries;
+    Matrix* matrix;
 };
 
 #endif // HISTORY_H

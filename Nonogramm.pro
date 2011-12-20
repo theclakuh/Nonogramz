@@ -45,4 +45,5 @@ FORMS    += mainwindow.ui
 
 OTHER_FILES += \
     TODO.txt \
-    CHANGELOG.txt
+    CHANGELOG.txt \
+    designer.pri

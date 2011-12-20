@@ -18,7 +18,7 @@ void MatrixWidget::paintEvent(QPaintEvent *painter){
     float cellSide = ((this->height() < this->width()) ? this->height()/matrix->rows() : this->width()/matrix->getWidth());
     Cell* currentCell;
 
-    for(int i=0; i < matrix->getCells().size(); i++){
+    for(int i=0; i < (int)matrix->getCells().size(); i++){
        currentCell = matrix->getCells().at(i);
        currentCell->setGeometry(x, y, cellSide, cellSide);
 

@@ -3,8 +3,16 @@
 History::History(){
 }
 
+History::History(Matrix* matrix){
+    this->matrix = matrix;
+}
+
 History::~History(){
     entries.clear();
+}
+
+void History::setMatrix(Matrix *matrix){
+    this->matrix = matrix;
 }
 
 void History::newEntry(Cell* cell, std::string name){
@@ -13,7 +21,7 @@ void History::newEntry(Cell* cell, std::string name){
 }
 
 HistoryEntry* History::popEntry(std::string name){
-    for(int i=0; i<entries.size(); i++)
+    for(int i=0; i<(int)entries.size(); i++)
         if(((HistoryEntry*)entries.at(i))->getName().compare(name))
             return (HistoryEntry*)entries.at(i);
 
@@ -23,10 +31,17 @@ HistoryEntry* History::popEntry(std::string name){
 HistoryEntry* History::popEntry(int number){
     return entries.at(number);//TODO not correct
 }
-
-HistoryEntry* History::popLastCorrectState(Matrix *m){
-    m;
-    return entries.back();// this is a dummy return value
+/**
+    How this should work? Only the last correct state or a backward mechanism?
+**/
+HistoryEntry* History::popLastCorrectState(){
+    HistoryEntry* ent = NULL;
+    for(int i =(int)entries.size();i>0;i--){
+        if(entries.at(i)->getCell()->getValue()){
+            ent = (HistoryEntry*)entries.at(i);
+        }
+    }
+    return ent;
 }
 
 HistoryEntry* History::popLastEntry(){

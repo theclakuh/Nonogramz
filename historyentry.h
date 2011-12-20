@@ -13,7 +13,7 @@ public:
     bool isUndone();
     void setMarked(bool b);
     bool isMarked();
-    Cell* getEntry();
+    Cell* getCell();
     std::string getName();
 private:
     Cell *cell;
