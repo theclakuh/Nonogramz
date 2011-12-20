@@ -3,14 +3,18 @@
 HistoryEntry::HistoryEntry(Cell* cell,std::string name){
     this->cell = cell;
     this->name = name;
+
+    if(name.length() > 0){
+        marked = true;
+    }
 }
 
 
-void HistoryEntry::setUndo(bool b){
-    undone = b;
+void HistoryEntry::setUndone(bool undone){
+    this->undone = undone;
 }
 
-bool HistoryEntry::getUndo(){
+bool HistoryEntry::isUndone(){
     return undone;
 }
 
@@ -28,6 +32,6 @@ void HistoryEntry::setMarked(bool b){
     marked = b;
 }
 
-bool HistoryEntry::getMarked(){
+bool HistoryEntry::isMarked(){
     return marked;
 }

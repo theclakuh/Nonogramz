@@ -1,7 +1,7 @@
 #include "editmode.h"
 
 EditMode::EditMode(SolveStrategy *solver, int height, int width, Level level){
-
+    solver; height; width; level;
 }
 
 EditMode::EditMode(SolveStrategy *solver, Matrix *matrix){
@@ -13,7 +13,7 @@ bool EditMode::testCorrectness(){
 }
 
 void EditMode::setMatrix(Matrix *matrix){
-
+    matrix;
 }
 
 SolveStrategy* EditMode::getSolver(){
@@ -21,5 +21,5 @@ SolveStrategy* EditMode::getSolver(){
 }
 
 void EditMode::setSolver(SolveStrategy *solver){
-
+    this->solver = solver;
 }

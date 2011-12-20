@@ -8,11 +8,11 @@
 class HistoryEntry
 {
 public:
-    HistoryEntry(Cell* cell,std::string name);
-    void setUndo(bool b);
-    bool getUndo();
+    HistoryEntry(Cell *cell, std::string name);
+    void setUndone(bool undone);
+    bool isUndone();
     void setMarked(bool b);
-    bool getMarked();
+    bool isMarked();
     Cell* getEntry();
     std::string getName();
 private:
